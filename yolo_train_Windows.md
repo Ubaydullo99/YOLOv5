@@ -1,3 +1,4 @@
+# For Windows
 ## Train yolov5 with sample dataset
     train.py --img-size 640 --batch-size 16 --epochs 50 --data data/coco128.yaml --cfg models/yolov5s.yaml --weights yolov5s.pt
 
@@ -11,3 +12,8 @@
     # detect with onnx format 
     python detect.py --weights ./runs/train/exp3/weights/best.onnx --img-size 640 --conf 0.25 --source ../datasets/coco128/images/train2017/000000000064.jpg
     
+
+
+## Changing onnx file to dlc with snpe
+    # Sample
+    snpe-onnx-to-dlc -i input_model.onnx -o output_model.dlc
