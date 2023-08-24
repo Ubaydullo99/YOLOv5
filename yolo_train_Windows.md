@@ -4,6 +4,7 @@
 
 ## my crack detection labeling and training 
     python train.py --img 640 --batch 16 --epochs 50 --data data/data.yaml --cfg models/yolov5s.yaml --weights yolov5s.pt
+    python train.py --img-size 1280 --batch 16 --epochs 50 --data data/data.yaml --cfg models/yolov5s.yaml --weights yolov5s.p
 
 ## detect using my created best.pt weights
     python detect.py --weights ./runs/train/exp3/weights/best.pt --img-size 640 --conf 0.25 --source ../datasets/coco128/images/train2017/000000000404.jpg
@@ -19,3 +20,4 @@
 ## Changing onnx file to dlc with snpe
     # Sample
     snpe-onnx-to-dlc -i input_model.onnx -o output_model.dlc
+
