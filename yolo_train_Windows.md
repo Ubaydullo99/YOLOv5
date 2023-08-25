@@ -6,6 +6,21 @@
     python train.py --img 640 --batch 16 --epochs 50 --data data/data.yaml --cfg models/yolov5s.yaml --weights yolov5s.pt
     python train.py --img-size 1280 --batch 16 --epochs 50 --data data/data.yaml --cfg models/yolov5s.yaml --weights yolov5s.p
 
+
+    # data.yaml: bash
+    train: dataset/images  # Path to your training images
+    val: dataset/images  # Path to your validation images
+    test: dataset/images  # Path to your test images
+    nc: 1  # Number of classes (assuming you are detecting one class, "crack")
+    names:
+      0: crack  # Class names
+
+    # in yolov5s.yaml
+    nc: 1 # number of classes
+
+    
+
+
 ## detect using my created best.pt weights
     python detect.py --weights ./runs/train/exp3/weights/best.pt --img-size 640 --conf 0.25 --source ../datasets/coco128/images/train2017/000000000404.jpg
     
