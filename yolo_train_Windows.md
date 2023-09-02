@@ -34,8 +34,9 @@
 
 
 ## Changing onnx file to dlc with snpe
-- opt/qcom/aistack
 
-        # Sample
-        snpe-onnx-to-dlc -i input_model.onnx -o output_model.dlc
+    # Sample
+    snpe-onnx-to-dlc -i input_model.onnx -o output_model.dlc
+
+- opt/qcom/aistack
 
